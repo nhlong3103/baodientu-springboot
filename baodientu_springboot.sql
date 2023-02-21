@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS 	DanhMuc;
 CREATE TABLE IF NOT EXISTS DanhMuc (
 	id 						INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	ten_danh_muc 			VARCHAR(30) NOT NULL UNIQUE KEY,
-    so_luong_bai_viet		INT NOT NULL DEFAULT(0),
+    so_luong_bai_viet		INT NOT NULL DEFAULT 0,
     updated_date			DATETIME DEFAULT NOW(),
     created_date			DATETIME DEFAULT NOW()
 );
@@ -41,7 +41,7 @@ CREATE TABLE `Account`(
     user_name				VARCHAR(50) NOT NULL UNIQUE KEY,
 	`email`					VARCHAR(50) NOT NULL UNIQUE KEY,
 	`password` 				VARCHAR(100) NOT NULL,
-    `role` 					ENUM('ADMIN','CUSTOMER') NOT NULL DEFAULT('CUSTOMER'),
+    `role` 					ENUM('ADMIN','CUSTOMER') NOT NULL DEFAULT'CUSTOMER',
     `status`				TINYINT DEFAULT(0) -- 0: chưa kích hoạt, 1 đã kích hoạt
 );
 
